@@ -1,0 +1,457 @@
+@font-face {
+    font-family: "nb";
+    src: url(./NBInternationalProBoo.ttf);
+}
+
+@font-face {
+    font-family: "rejoy";
+    src: url(./Rejouice-Headline.ttf);
+    /*cannot change font weight for font file*/
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "rejouice headline";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/*PAGE 1--> CURSOR, VIDEO, PAGE1-CONTENT (nav(h3,h4)  h1(mickey))*/
+
+#cursor {
+    height: 7.5vw;
+    width: 7.5vw;
+    z-index: 9;
+    background-color: rgb(233, 58, 157);
+    border-radius: 50%;
+
+    position: fixed;
+    /*Fixed positioning is a specialized form of absolute positioning; elements with fixed positioning are fixed relative to the browser page */
+    display: flex;
+    /*brings its child at center wrt parent */
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+    font-size: 1.15vw;
+}
+
+#page1 video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.201);
+    /*keeping opacity very less*/
+    position: relative;
+    /*parent ke children control mei rete hai, appear at upper layer */
+    color: aliceblue;
+    z-index: 10;
+    /*property specifies the STACK ORDER of an element...If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.*/
+
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /*background-color: grey;  -->used just while editing*/
+    justify-content: space-between;
+    padding: 3vw 3vw;
+    /*x,y*/
+}
+
+nav h3 {
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+
+.dropbtn {
+    font-size: 1.7vw;
+    font-weight: 100;
+    background-color: transparent;
+    border: none; /*border of button needs to be removed*/
+    outline: none;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+    z-index: 15;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover {
+    padding: 1vw 2vw;
+    background-color: rgb(237, 137, 7);
+    color: black;
+}
+
+
+#page1-content h1 {
+    font-family: nb;
+    font-size: 30vw;
+    font-weight: 100;
+    line-height: 22vw;
+    object-fit: cover;
+
+}
+
+#page1-content h1 span {
+    font-family: rejoy;
+    display: inline-block;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 80px;
+}
+.heading h2{
+    font-size: 100px;
+    
+}
+
+/*                                   PAGE 2                               */
+#page2 {
+    height: 100vh;
+    width: 100%;
+    /*100vw likhegi to page width fixed nhi hogi*/
+    background-color: rgb(0, 0, 0);
+    color: rgb(191, 195, 198);
+}
+
+#page2-content h2 {
+    font-size: 2.2vw;
+    font-weight: 20;
+}
+
+#page2-content h3 {
+    font-size: 2.2vw;
+    font-weight: 20;
+}
+
+#page2-content nav {
+    padding: 4vw 4vw;
+}
+
+.line {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    width: 90%;
+    margin-left: 4vw;
+    /*padding is around the content therefore no effect, margin is outside the box*/
+}
+
+#para {
+    font-size: 4.0vh;
+    /*para div height wise fix nhi hoga*/
+    font-weight: 80%;
+    font-family: nb;
+    object-fit: cover;
+    align-items: center;
+    position: relative;
+    padding-top: 1vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    gap: 4px;
+
+}
+
+/*                                      PAGE 3                                       */
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+#page3-top {
+    position: relative;
+    /*good response between child and parent*/
+    text-align: center;
+    color: rgb(191, 195, 198);
+}
+
+#page3-top h2 {
+    font-size: 5vw;
+    font-weight: 70;
+    font-family: nb;
+    margin-top: 1vw;
+}
+
+#page3-top h3 {
+    padding-top: 10vw;
+}
+
+#page3-top h3 span {
+    font-size: 2vw;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20%;
+    padding: 5px 7px;
+}
+
+/*IMAGE AND VIDEO SECTION PAGE3*/
+#image-section {
+    height: 80%;
+    /*77vh*/
+    width: 100%;
+    background-color: black;
+    margin-top: 4vw;
+    display: flex;
+    /*all these are written in parent element*/
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+}
+
+#image-section .box {
+    height: 70vh;
+    width: 33%;
+    /* background-color: blueviolet; */
+    margin: 2vw 2vw;
+    position: relative;
+    /*very important to handle box children(vid, img) well*/
+}
+#image-section p{
+    backdrop-filter: transaprent ;
+    z-index: 100;
+    color: white;
+    font-size: 20px;
+}
+
+#image-section .box img {
+    object-fit: cover;
+    position: absolute;
+    /*upper layer*/
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.8s;
+}
+
+#image-section .box:hover img {
+    opacity: 0;
+}
+
+#image-section .box video {
+    height: 100%;
+    /*sbse pehle container bnao boxes fir usme videos daalo as center*/
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*                                       PAGE4                             */
+#page4 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(233, 58, 157);
+    font: bolder;
+}
+
+#page4-content {
+    padding-top: 25vw;
+    /*handling the overlapping of writting part with videos*/
+    padding-left: 4vw;
+    object-fit: cover;
+    align-items: center;
+}
+.page4-line{
+    color: black;
+
+}
+
+#page4-content h2 {
+    padding-left: 4vw;
+    font-weight: 50;
+    font-family: nb;
+    font-size: medium;
+}
+
+/*                                      PAGE 5                                       */
+#page5 {
+    height: 100vh;
+    /*100% mtt krna then it doeant go as viewport or not flexible*/
+    width: 100%;
+    background-color: rgb(233, 58, 157);
+    padding-top: 6vw;
+
+}
+
+#page5-top h2 {
+    font-size: 8vw;
+    font-family: rejoy;
+    font-weight: 50%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 94%;
+    margin-left: 4vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+#page5-top button{
+    background-color: rgb(233, 58, 157);
+    font-size: 8vw;
+    font-weight: 50%;
+    /* border-radius: 50%; */
+}
+#swiperdiv {
+    height: 60vh;
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    margin-top: 1vw;
+}
+
+.swiper {
+    width: 130%;
+    height: 100%;
+}
+
+.swiper-slide {
+    /* width: 400px ; */
+    text-align: center;
+    font-size: 18px;
+    /* background: #653c3c; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 19.5%;
+    /* height: 100%;  */
+    object-fit: contain;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loader {
+    font-family: nb;
+    font-size: larger;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    gap: 10px;
+}
+
+
+/*                                      PAGE 6                                    */
+#page6 {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+#page6-content {
+    /* height: 100vh;
+    width: 100%;
+    background-color: black; */
+    position: relative;
+    flex-direction: column;
+    color: rgb(182, 186, 190);
+    padding: 2vw 2vw;
+}
+
+#page6-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page6L h2 {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+#page6R {
+    color: rgb(182, 186, 190);
+    display: flex;
+}
+
+#page6R h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 2vw 2vw;
+    font-size: medium;
+}
+
+#seat {
+    /*button */
+    background-color: black;
+    border: 2px solid gray;
+    border-radius: 10%;
+    padding: 16px 16px;
+    color: aliceblue;
+    font-weight: 50%;
+}
+
+#seat:hover {
+    background-color: rgb(182, 186, 190);
+    /* Green */
+    color: black;
+}
+
+#page6-middle h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: medium;
+
+}
+
+#page6-middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vw;
+}
+
+#page6-bottom h1 {
+    font-family: rejoy;
+    font-size: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
